@@ -11,7 +11,7 @@ import org.junit.runners.Suite;
 @RunWith(Categories.class)
 @IncludeCategory(GoodTestCategory.class)
 @ExcludeCategory(BadTestCategory.class)
-@Suite.SuiteClasses({ HelloJunitTest.class, TrackingServiceTests.class })
+@Suite.SuiteClasses({ HelloJunitTest.class, TrackingServiceTest.class })
 public class GoodTestSuite {
 
 }

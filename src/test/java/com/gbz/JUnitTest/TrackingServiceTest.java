@@ -11,6 +11,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -20,7 +21,7 @@ import org.junit.rules.Timeout;
 import com.simpleprogrammer.proteintracker.InvalidGoalException;
 import com.simpleprogrammer.proteintracker.TrackingService;
 
-public class TrackingServiceTests {
+public class TrackingServiceTest {
 
 	private TrackingService service;
 
@@ -88,11 +89,12 @@ public class TrackingServiceTests {
 	}
 
 	@Rule
-	public Timeout timeout =  Timeout.millis(20); 
+	public Timeout timeout =  Timeout.millis(2000); 
 	
 	
 	@Test
 	@Category(BadTestCategory.class)
+	@Ignore
 	public void bad_test() {
 		for (int i = 0; i < 1000000000; i++) {
 			service.addProtein(1);
