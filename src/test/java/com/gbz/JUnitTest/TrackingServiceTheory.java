@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Assume;
 
+import com.simpleprogrammer.proteintracker.NotifierStub;
 import com.simpleprogrammer.proteintracker.TrackingService;
 
 @RunWith(Theories.class)
@@ -23,7 +24,7 @@ public class TrackingServiceTheory {
 	
 	@Theory
 	public void positive_value_should_always_always_have_positive_total(int value){
-		TrackingService service = new TrackingService(); 
+		TrackingService service = new TrackingService(new NotifierStub()); 
 		service.addProtein(value);
 		
 		//vérification du input
